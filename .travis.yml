@@ -5,7 +5,7 @@ python:
 install:
   - pip install -e ".[test]"
 script:
-  - pytest --cov=mrtarget --cov-report term tests/ --fulltrace
+  - pytest --cov=opentargets_search_generator --cov-report term tests/ --fulltrace
 branches:
   only:
   - master

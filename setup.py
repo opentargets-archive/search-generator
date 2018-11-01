@@ -40,6 +40,6 @@ setup(name=__pkgname__,
         'Programming Language :: Python :: 3.6'
       ],
       extras_require={
-          'test': ['pytest', 'codecov']
+          'test': ['pytest', 'codecov', 'pytest-cov']
       }
 )
