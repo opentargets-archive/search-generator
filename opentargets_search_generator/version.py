@@ -1,0 +1,7 @@
+__pkgname__ = 'opentargets-search-generator'
+__author__ = 'OpenTargets Core Team <support@targetvalidation.org>'
+__author_email__ = 'support@targetvalidation.org'
+__license__ = 'Apache License, Version 2.0'
+__homepage__ = 'https://github.com/opentargets/platform-ebi-search-generator'
+__version__ = '0.0.1'
+__description__ = 'Generate data to be indexed by EBI Search Engine'

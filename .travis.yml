@@ -1,0 +1,35 @@
+sudo: required
+language: python
+python:
+  - 3.6
+install:
+  - pip install -e ".[test]"
+script:
+  - pytest --cov=mrtarget --cov-report term tests/ --fulltrace
+branches:
+  only:
+  - master
+  - "/\\d+\\.\\d+\\.\\d+/"
+  - "/mk.*/"
+  - "/af.*/"
+  - "/ck.*/"
+  - "/ms.*/"
+  - "/MS.*/"
+  - "/gp.*/"
+  - "/pl.*/"
+  - "/gk.*/"
+notifications:
+  email:
+    recipients:
+    - ops@opentargets.org
+    on_success: never
+    on_failure: always
+deploy:
+  provider: pypi
+  user: "${PYPI_USERNAME}"
+  password: "${PYPI_PASSWORD}"
+  on:
+    tags: true
+after_success:
+  - codecov
+
